@@ -21,7 +21,7 @@ PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
-  pg
+  pg (~> 1.4)
   rspec (~> 3.12)
 
 BUNDLED WITH
