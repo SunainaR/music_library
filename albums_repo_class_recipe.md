@@ -135,15 +135,15 @@ class StudentRepository
 
   # Add more methods below for each operation you'd like to implement.
 
-  # def create(album)
+  def create(album)
 
-  # end
+  end
 
   # def update(album)
   # end
 
-  # def delete(album)
-  # end
+  def delete(album)
+  end
 end
 ```
 
@@ -159,32 +159,46 @@ These examples will later be encoded as RSpec tests.
 # 1
 # Get all students
 
-repo = StudentRepository.new
+repo = AlbumRepository.new
 
-students = repo.all
+albums = repo.all
 
-students.length # =>  2
+albums.length # =>  2
 
-students[0].id # =>  1
-students[0].name # =>  'David'
-students[0].cohort_name # =>  'April 2022'
+albums[0].id # =>  1
+albums[0].name # =>  'David'
+albums[0].cohort_name # =>  'April 2022'
 
-students[1].id # =>  2
-students[1].name # =>  'Anna'
-students[1].cohort_name # =>  'May 2022'
+albums[1].id # =>  2
+albums[1].name # =>  'Anna'
+albums[1].cohort_name # =>  'May 2022'
 
 # 2
 # Get a single student
 
 repo = StudentRepository.new
 
-student = repo.find(1)
+album = repo.find(1)
 
-student.id # =>  1
-student.name # =>  'David'
-student.cohort_name # =>  'April 2022'
+album.id # =>  1
+album.name # =>  'David'
+album.cohort_name # =>  'April 2022'
 
 # Add more examples for each method
+# 3
+# Create a single student
+repository = AlbumRepository.new
+
+album = Album.new
+album.title = 'Trompe le Monde'
+album.release_year = 1991
+album.artist_id = 1
+
+repository.create(album)
+
+all_albums = repository.all
+
+# The all_albums array should contain the new Album object
 ```
 
 Encode this example as a test.
@@ -218,13 +232,3 @@ end
 ## 8. Test-drive and implement the Repository class behaviour
 
 _After each test you write, follow the test-driving process of red, green, refactor to implement the behaviour._
-
-<!-- BEGIN GENERATED SECTION DO NOT EDIT -->
-
----
-
-**How was this resource?**  
-[😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases&prefill_File=resources%2Frepository_class_recipe_template.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases&prefill_File=resources%2Frepository_class_recipe_template.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases&prefill_File=resources%2Frepository_class_recipe_template.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases&prefill_File=resources%2Frepository_class_recipe_template.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy%2Fdatabases&prefill_File=resources%2Frepository_class_recipe_template.md&prefill_Sentiment=😀)  
-Click an emoji to tell us.
-
-<!-- END GENERATED SECTION DO NOT EDIT -->
