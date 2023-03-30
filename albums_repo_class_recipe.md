@@ -176,7 +176,7 @@ albums[1].cohort_name # =>  'May 2022'
 # 2
 # Get a single student
 
-repo = StudentRepository.new
+repo = AlbumRepository.new
 
 album = repo.find(1)
 
@@ -186,7 +186,7 @@ album.cohort_name # =>  'April 2022'
 
 # Add more examples for each method
 # 3
-# Create a single student
+# Create a single Album
 repository = AlbumRepository.new
 
 album = Album.new
